@@ -45,33 +45,36 @@
 	height: 71%;
 	background-size:cover;
 	margin: auto;
+	position: relative;
 }
-.kitap:hover .non_visible{
+.kitap:hover .visible{
 	visibility:visible;
 }
-.kitap:hover .non_visible2{
+.kitap:hover .visible{
 	visibility: visible;
 }
-.non_visible{
+.visible{
 	visibility:hidden;
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	height: 15%;
+}
+.non_visible{
 	width: 40%;
 	float: left;
-	height:15%;
-	margin-top:100%;
+	height:100%;
 	color:white;
 	background-color:#17375e;
 }
 .nva{
-	vertical-align: middle;
 	text-decoration:none;
 	color:white;
 }
 .non_visible2{
-	visibility:hidden;
 	width: 60%;
 	float: left;
-	height:15%;
-	margin-top:100%;
+	height:100%;
 	color:red;
 	background-color: #80ff80;
 }

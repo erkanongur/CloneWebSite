@@ -3,6 +3,11 @@
   	<meta charset="UTF-8">
 
 	<link type="text/css" rel="stylesheet" href="CSS/index.css"/>
+	<script type="text/javascript">
+		function eklendi(){
+			alert("Sepete Eklendi...");
+		}
+	</script>
 </head>
 <body>
 <?php 
@@ -33,8 +38,8 @@ include 'baglanti.php';
 			<div class="kitap">
 				<?php
 					echo '<div style="background-image:url(images/'.$kitap_imgs[$i].');" class="kitap_img">'.
-							'<div class="non_visible"><a href="urun.php?id='.$kid.'" class="nva">İNCELE</a></div>
-							<div class="non_visible2"><a href="#" class="nva2">SEPETE EKLE</a></div>'.			
+							'<div class="visible"><div class="non_visible"><a href="urun.php?id='.$kid.'" class="nva">İNCELE</a></div>
+							<div class="non_visible2"><a href="sepet_functions/sepeteEkle.php?id='.$kid.'" onclick="eklendi();" class="nva2">SEPETE EKLE</a></div></div>'.			
 							'</div><br/><div class="kitap_bilgi"><a class="kitap_ad" href="#">'.$kitap_adlari[$i].'</a>'.
 							'<a class="fiyat" href="#">'.$kitap_fiyatlari[$i].'&nbspTL</a></div>';
 

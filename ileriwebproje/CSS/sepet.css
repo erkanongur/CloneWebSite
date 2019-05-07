@@ -1,0 +1,133 @@
+.main{
+	width:100%;
+	display: flex;
+	justify-content: center;
+}
+.bos_sepet{
+	width:50%;
+	height: 25%;
+	text-align: center;
+}
+.container{
+	width:90%;
+	background-color:white;
+
+	display: flex;
+	justify-content: center;
+}
+.sepet{
+	width:95%;
+	background-color: white;
+
+	display: flex;
+	justify-content: space-evenly;
+}
+.sepet_icerik{
+	width:70%;
+
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	border:1px solid #DDDDDD;
+	border-top:none;
+}
+.urun{
+	margin-bottom:3%;
+	margin-left: 2%;
+	width: 95%;
+	background-color: white;
+	display: flex;
+	justify-content: space-evenly;
+	border-top:1px dashed black;
+}
+
+.urun_img{
+	width: 10%;
+	background-color: gray;
+}
+.urun_resim{
+	width: 100%;
+	height: 100px;
+
+}
+
+.urun_ad{
+	width: 60%;
+	height: 100px;
+	background-color: White;
+}
+.urun_ismi{
+	text-decoration: none;
+	color:black;
+}
+.sepettenKaldir:hover{
+	cursor: pointer;
+}
+
+.urun_adet{
+	width: 15%;
+	height: 100px;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+}
+.adet_div{
+	margin-top: 40%;
+}
+.adet_bilgisi{
+	width: 35px;
+	float: left;
+}
+.sepeteEkle_form{
+	margin: 0px;
+	padding: 0px;
+}
+.sepettenSil_form{
+	margin: 0px;
+	padding: 0px;
+}
+
+.urun_fiyat{
+	width: 10%;
+	height: 100px;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+}
+.Alisveris_Devam{
+	text-decoration: none;
+	color: black;
+	border:1px solid gray;
+	width: 200px;
+	height: 20px;
+	background-color: #DDDDDD
+}
+.sepet_ozeti{
+	width:25%;
+	height: 300px;
+	background-color: white;
+	border: 1px solid #DDDDDD
+}
+.ozet_tablo{
+	width: 90%;
+	margin: auto;
+}
+.ozet_tablo #sol{
+	text-align: left;
+	color: #DDDDDD
+	width:200px;
+	height: 35px;
+}
+.ozet_tablo #sag{
+	text-align: right;
+	color: #DDDDDD
+	width:200px;
+	height: 35px;
+}
+#buton{
+	background-color: #17375e;
+	color:white;
+	height: 30px;
+	border:none;
+	margin-left: 25%;
+}

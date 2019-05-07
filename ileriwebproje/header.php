@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<?php include 'baglanti.php';
 		session_start();
-	 ?>	 
+	?> 
 </head>
 <body style="margin:0px;padding:0px;">
 
@@ -108,15 +108,15 @@
 	<input type="search" placeholder="    Yazar Adı, Kitap Adı Yada Stok Kodu İle Arama Yapabilirsiniz..."/ class="searchbar">
 	<div class="kargo">
 		<i class="fas fa-truck"></i>
-		<a style="margin-right:10px" href="kargo.php">Kargo Sorgulama</a>
+		<a style="margin-right:10px" href="kargo.html">Kargo Sorgulama</a>
 		<i class="fas fa-shopping-basket"></i>
-		<a href="sepet.php">Sepetim</a>
+		<a href="sepet_giris_kontrol.php">Sepetim</a>
 	</div>	
 </div>
 <div class="menu">
 	<ul id="menu">
-		<li id="a">ANASAYFA</li>
-		<li id="a">KATEGORİLER&nbsp&nbsp
+		<li id="a"><a href="index.php">ANASAYFA</a></li>
+		<li id="a"><a href="kategoriler.php">KATEGORİLER</a>&nbsp&nbsp
 			<i class="fas fa-sort-down"></i>
 			<ul id="icmenu">
 				<li id="b"><a href="konu.html"><i class="fas fa-caret-right"></i>&nbspBİLİM TEKNOLOJİ VE ÇEVRE</a></li>
@@ -142,7 +142,7 @@
 				<li id="b"><a href="konu.html"><i class="fas fa-caret-right"></i>&nbsp HEDİYELİK & AKSESUAR</a></li>
 			</ul>
 		</li>
-		<li id="a">YENİ ÇIKAN KİTAPLAR</li>
+		<li id="a"><a href="yenikitap.php">YENİ ÇIKAN KİTAPLAR</a></li>
 	</ul>
 </div>
 </div>		

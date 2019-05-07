@@ -22,8 +22,19 @@
 	 	}
        var e = document.getElementById(id);
        e.style.display = 'block';
-    }
-
+        }
+        function yorum_yap(id){
+            location.replace("yorumyap.php?id="+id);
+        }
+        function sepeteEkle(id){
+            var eleman = document.getElementById('adet');
+            alert("Sepete Eklendi..");
+            location.replace("sepet_functions/sepeteEkle_coklu.php?id="+id+"&sayi="+eleman.value);
+        }
+        function satinal(id, sayi){
+            var eleman = document.getElementById('adet');
+            location.replace("sepet_functions/satinAl.php?id="+id+"&sayi="+eleman.value);
+        }
 	 </script>
 </head>
 <body style="margin:0px;padding: 0px;">
@@ -44,7 +55,7 @@
 				<p id="kitapinfo2">Yayınevi : <?php echo $kitapveri["yayinevi"]; ?></p>
 				<p id="kitapinfo2">Stok Kodu : <?php echo $kitapveri["kitapid"]; ?></p>
 				<p id="kitapinfo2">Fiyat : <?php echo $kitapveri["kitapfiyat"]; ?></p>
-				<select class='_selectBox' id='quantity_225260' name='quantity_225260'>
+				<select class='_selectBox' id='adet'>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -56,8 +67,8 @@
                     <option value="9">9</option>
                     <option value="10">10</option>
                 </select>
-                <a href="sepetekle.php"><img src="images/sepetekle.jpg" /></a>
-                <a href="satinal.php"><img src="images/satinal.jpg" /></a><br/><br/>
+                <img onclick="sepeteEkle(<?php echo $id; ?>);" src="images/sepetekle.jpg" />
+                <img src="images/satinal.jpg" onclick="satinal(<?php echo $id; ?>);" class="satinal" /><br/><br/>
                 <a href="favekle.php"><img src="images/favekle.jpg" /></a>
                 <a href="alarm.php"><img src="images/alarm.jpg" /></a>
                 <a href="oner.php"><img src="images/oner.jpg" /></a>
@@ -98,7 +109,7 @@
                         <tbody><tr>
                             <td bgcolor="#CCCCCC" align="center" height="50" width="46"></td>
                             <td bgcolor="#F8E3F0" colspan="2" align="center" height="20" valign="center" width="147">
-                                <img src="//st1.myideasoft.com/6.4.3.0/storefront/../images/cardlogos/cardlogo_3.gif?revision=6.4.3.0-15" alt="T. İş Bankası">
+                                <img src="images/maximum.jpg" alt="T. İş Bankası">
                                     <br><b>T. İş Bankası</b>
                                     <br><b>&nbsp;</b>
                             </td>
@@ -122,7 +133,7 @@
                         	<tr>
                                 <td bgcolor="#CCCCCC" align="center" height="50" width="46"></td>
                                 <td bgcolor="#EDF4E6" colspan="2" align="center" height="20" valign="center" width="147">
-                                    <img src="//st3.myideasoft.com/6.4.3.0/storefront/../images/cardlogos/cardlogo_1.gif?revision=6.4.3.0-15" alt="Garanti Bankası">
+                                    <img src="images/bonus.jpg" alt="Garanti Bankası">
                                     <br><b>Garanti Bankası</b>
                                     <br><b>&nbsp;</b>
                                 </td>
@@ -146,7 +157,7 @@
                         	<tr>
                                 <td bgcolor="#CCCCCC" align="center" height="50" width="46"></td>
                                 <td bgcolor="#F1E7F3" colspan="2" align="center" height="20" valign="center" width="147">
-                                    <img src="//st3.myideasoft.com/6.4.3.0/storefront/../images/cardlogos/cardlogo_10.gif?revision=6.4.3.0-15" alt="Yapı Kredi">
+                                    <img src="images/world.jpg" alt="Yapı Kredi">
                                     <br><b>Yapı Kredi</b>
                                     <br><b>&nbsp;</b>
                                 </td>
@@ -178,15 +189,18 @@
 			<div class="yorum">
 				<b style="color:#17375e"><?php echo $yorum["yorum_baslik"]; ?></b><br/><br/>
 				<?php echo $yorum["yorum"]."<br/><br/>";
-				if($yorum["yorum_anonimlik"] == 1){
-				echo $yorum["yorum_ad"]."&nbsp".$yorum["yorum_soyad"]."&emsp;";
+				if($yorum["yorum_anonimlik"] == 0){
+				    echo $yorum["yorum_ad"]."&nbsp".$yorum["yorum_soyad"]."&emsp;";
 				}
+                else{
+                    echo $yorum["yorum_ad"][0]."...&nbsp".$yorum["yorum_soyad"][0]."...&emsp;";
+                }
 				echo $yorum["yorum_tarih"]."&emsp;".$yorum["yorum_saat"]."<br/><hr></hr>"; ?>
 			</div>
 			<?php
 			 }
-			?>
-			<div class="yorum_yap" onclick="location.href ='yorumyap.php'">
+			
+			echo '<div class="yorum_yap" onclick="yorum_yap('.$kitapveri["kitapid"].');">'?>
 				Yorum Yaz
 			</div>	
 		</div>

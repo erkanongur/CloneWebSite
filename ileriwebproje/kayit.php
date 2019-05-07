@@ -8,7 +8,7 @@
 		include 'baglanti.php';
 	?>
 	<div class="baslik">
-		<h3>YENİ ÜYELİK</h3>
+		<h3>YORUM YAP</h3>
 		<hr style="width:90%;margin-top:3%;float:left;"></hr>
 	</div>
 	<div>
