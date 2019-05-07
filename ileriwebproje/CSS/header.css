@@ -1,0 +1,121 @@
+.header{
+}
+.hakkimizda{
+	margin-left:70px;
+	font-size:15px;
+}
+.hakkimizda a:hover{
+	border-bottom:1px solid gray;
+}
+.hakkimizda a{
+	color:black;
+	text-decoration:none;
+}
+.giris{
+	float:right;
+	margin-right:10%;
+}
+.giris a{
+	text-decoration:none;
+	font-size:17px;
+	font-weight:bold;
+}
+.giris a:hover{
+	text-decoration:none;
+	border-bottom:none;
+}
+.giris_input{
+	width: 120px;
+	border-color:#D5D5D5;
+}
+.arama{
+	margin-top:10px;
+	width:100%;
+	height:130px;
+	background-image: url('http://st3.myideasoft.com/idea/bq/34/themes/selftpl_2/assets/images/bg_body.jpg?revision=1526392232');
+}
+.resim{
+	float:left;
+	margin-top:25px;
+	margin-left:70px;
+}
+.searchbar{
+	float:left;
+	width:600px;
+	height:50px;
+	margin-top:50px;
+	margin-left:10px;
+	margin-right:10px;
+	border:3px solid #D5D5D5;
+}
+::placeholder{
+	color:#B5B5B5
+}
+.kargo{
+	float:left;
+	margin-top:65px;
+	margin-left:10px;
+	font-size:15px;
+	font-weight:bold;
+}
+.kargo a{
+	text-decoration:none;
+	color:black;
+}
+.menu{
+	background-color:#17375e;
+	float:left;
+	width:100%;
+}
+#menu{
+	align:center;
+}
+.menu ul li{
+	color:white;
+	list-style:none;
+	float:left;
+	margin-left:20px;
+	height:30px;
+}
+.menu ul li a{
+	text-decoration:none;
+	font-weight:bold;
+	font-family:Coral Colour;
+}
+#menu li ul{
+	display:none;
+	position:absolute;
+}
+#menu li:hover ul{
+	display:block;
+	cursor:pointer;
+	background-color:#D5D5D5;
+}
+#icmenu{
+	position:relative;
+	margin-top:12px;
+	list-style:none;
+	float:left;
+	width:100%;
+	left:-40px;	
+}
+#icmenu li{
+	color:black;
+	font-size:12px;
+	width:250px;
+	height:30px;
+	margin-top:10px;
+	float:left;
+}
+#menu li:hover{
+	color:red;
+}
+#b a{
+	text-decoration:none;
+	color:black;
+}
+#b a:hover{
+	border-bottom:1px solid black;
+	color:red;
+	border-bottom-color:red;
+}

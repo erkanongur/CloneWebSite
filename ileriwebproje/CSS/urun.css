@@ -1,0 +1,113 @@
+.main{
+	width:90%;
+	height:auto;
+	margin: auto;
+}
+.kategori{
+	height: 5%;
+	width: 90%;
+	margin:auto;
+	margin-top:5%;
+
+}
+.kitapresim{
+	width:360px;
+	height:525px;
+	float: left;
+}
+.kitapinfo{
+	float: left;
+	margin-left: 10%;
+}
+#kitapinfo{
+	font-size: 25px;
+}
+._selectBox{
+	width: 96px;
+    height: 45px;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Open Sans, sans-serif;
+    border: 1px solid black;
+    float: left;
+    margin-right:30px;
+    
+}
+.secenekler{
+	width:100%;
+	background-color: white;
+	float: left;
+	margin-bottom:2%;
+}
+#secenek_menu{
+	list-style: none;
+	padding:10px;
+}
+#secenek_menu li{
+	float: left;
+	width: 200px;
+	background-color: #17375e;
+	padding:10px;
+	color:white;
+	font-weight: bold;
+}
+#secenek_menu li:hover {
+	cursor: pointer;
+}
+
+#second{
+	margin-left:20px;
+}
+
+#third{
+	margin-left:20px;
+}
+
+#first_open{
+	width:95%;
+	background-color:white;
+	margin:auto;
+	float: left;
+	border: 1px solid #D5D5D5;
+	display: block;
+	margin-bottom:5%;
+}
+#second_open{
+	width:95%;
+	background-color:white;
+	margin:auto;
+	float: left;
+	border: 1px solid #D5D5D5;
+	display: none;
+	margin-bottom:5%;
+}
+#third_open{
+	width:95%;
+	background-color:white;
+	margin:auto;
+	float: left;
+	border: 1px solid #D5D5D5;
+	display: none;
+	margin-bottom:5%;
+}
+.dis_table{
+	width: 100%;
+}
+.yorum{
+	width: 98%;
+	margin-left: 2%;
+	margin-top: 3%;
+}
+.yorum_yap{
+	width:15%;
+	padding: 1%;
+	color: white;
+	background-color: #17375e;
+	text-align: center;
+	margin: auto;
+	margin-bottom:2%;
+}
+.yorum_yap:hover{
+	cursor:pointer;
+}

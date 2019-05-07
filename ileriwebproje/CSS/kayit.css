@@ -1,0 +1,12 @@
+.baslik{
+	width: 100%;
+	padding:5%;
+	color:#17375e;
+}
+.sutun{
+	width:50%;
+	padding: 1%;
+}
+#span{
+	float:right;
+}

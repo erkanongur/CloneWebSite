@@ -1,0 +1,86 @@
+.main{
+	width:100%;
+	height:auto;
+	background-color:white;
+	float: left;
+	margin-bottom:5%;
+}
+.kitap_sutun{
+	width: 95%;
+	margin: auto;
+}
+.kitap{
+	width: 15%;
+	height:50%;
+	background-color: white;
+	float: left;
+	text-align: center;
+	margin-left: 4%;
+	margin-top: 20px;
+	border:1px solid #D5D5D5;
+}
+.kitap:hover{
+	border:1px solid #17375e;
+}
+.fiyat{
+	line-height:22px;
+	color:#333333;
+	font-size:18px;
+	font-weight:700;
+	text-decoration: none;
+	bottom: 0;
+	left: 40%;
+	position: absolute;
+}
+.kitap_ad{
+	line-height:19px;
+	color:#222222;
+	font-size:17px;
+	font-weight:300;
+	text-decoration: none;
+	text-align: center;
+}
+.kitap_img{
+	width: 100%;
+	height: 71%;
+	background-size:cover;
+	margin: auto;
+}
+.kitap:hover .non_visible{
+	visibility:visible;
+}
+.kitap:hover .non_visible2{
+	visibility: visible;
+}
+.non_visible{
+	visibility:hidden;
+	width: 40%;
+	float: left;
+	height:15%;
+	margin-top:100%;
+	color:white;
+	background-color:#17375e;
+}
+.nva{
+	vertical-align: middle;
+	text-decoration:none;
+	color:white;
+}
+.non_visible2{
+	visibility:hidden;
+	width: 60%;
+	float: left;
+	height:15%;
+	margin-top:100%;
+	color:red;
+	background-color: #80ff80;
+}
+.nva2{
+	text-decoration:none;
+	color:white;
+}
+.kitap_bilgi{
+	width:100%;
+	position:relative;
+	height:20%;
+}

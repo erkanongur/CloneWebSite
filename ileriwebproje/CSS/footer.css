@@ -1,0 +1,112 @@
+.footer{
+	width:100%;
+	height:auto;
+	float:left;
+}
+.hizmetler{
+	width:100%;
+	height:15%;
+	background-color:white;
+}
+.banner_img{
+	height:15%;
+	width:90%;
+	padding:1%;
+	margin:auto;
+}
+.images{
+	margin-left:10px;
+}
+.abonelik{
+	background-color:#17375e;
+	height:20%;
+	width:100%;
+	color:white;
+}
+.banner_yazi{
+	height:20%;
+	width:30%;
+	margin-left:15%;
+	padding:1px;
+}
+.banner_kayit{
+	float:right;
+	height:10%;
+	width:30%;
+	margin-right:15%;
+	padding:1px;
+}
+.banner_mail{
+	float:left;
+	width:380px;
+	height:38px;
+}
+.NewsletterButton{
+	width:80px;
+	height:38px;
+	background-color:#f22100;
+	border:none;
+	cursor:pointer;
+}
+.bilgiler{
+	width:100%;
+	height:350px;
+	background-image: url('http://st3.myideasoft.com/idea/bq/34/themes/selftpl_2/assets/images/bg_body.jpg?revision=1526392232');
+}
+.banner_list{
+	list-style:none;
+	float:left;
+	margin-left:5%;
+	margin-top:3%;
+}
+.banner_list li{
+	margin-top:5px;
+}
+.banner_list li a{
+	text-decoration:none;
+}
+.banner_baslik{
+	line-height: 72px;
+	color: #17375e;
+	font-size: 14px;
+	font-weight: 700;
+}
+.banner_link{
+	line-height: 23px;
+	color: #5e5e5e;
+	font-size: 16px;
+}
+.banner_bilgi{
+	line-height: 30px;
+	color: #5e5e5e;
+	font-size: 16px;
+}
+.banner_link:hover{
+	border-bottom:1px solid #5e5e5e;
+	color:red;
+	border-color:red;
+	cursor:pointer;
+}
+.bankalar{
+	width:100%;
+	height:100px;
+	float:left;
+}
+.banka_img{
+	margin-left:100px;
+	background-color:red;
+	float:left;
+}
+.idea_soft{
+	float:right;
+	margin-right:100px;
+	margin-top:10px;
+}
+.footer_yazi{
+	width:100%;
+}
+.copyright{
+	color: #5e5e5e;
+	font-size: 16px;
+	text-align:center;
+}
