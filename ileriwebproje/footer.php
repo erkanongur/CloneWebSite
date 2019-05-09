@@ -2,7 +2,7 @@
 <head>
 	<link type="text/css" rel="stylesheet" href="CSS/footer.css"/>
 	<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="fontawesome/css/all.css">
 	<meta charset="utf-8"/>
 </head>
 <body style="margin:0px;padding:0px;">

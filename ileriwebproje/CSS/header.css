@@ -51,6 +51,16 @@
 ::placeholder{
 	color:#B5B5B5
 }
+.search_btn{
+	width: 50px;
+	height: 50px;	
+	float: left;
+	margin-top: 50px;
+}
+.search_btn #search_buton{
+	background-image: url("images/search.png");
+	background-repeat: no-repeat;
+}
 .kargo{
 	float:left;
 	margin-top:65px;

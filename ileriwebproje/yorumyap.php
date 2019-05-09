@@ -1,11 +1,21 @@
 <html>
 <head>
-	<link type="text/css" rel="stylesheet" href="CSS/kayit.css"/>
+	<link type="text/css" rel="stylesheet" href="CSS/yorumyap.css"/>
+	<script type="text/javascript">
+		function yonlendir(){
+			var eleman = document.getElementsByClassName('gizli');
+			var kimlik = eleman[0].id;
+			console.log("Çalıştıııı");
+			location.replace("urun.php?id=" + kimlik);
+			
+		}
+	</script>
 </head>
 <body>
 	<?php 
 		include 'header.php';
 		include 'baglanti.php';
+		$id = intval($_GET['id']);
 	?>
 	<div class="container">
 		<div class="baslik">
@@ -17,6 +27,7 @@
 			<form action="" name="yorum_form" method="POST" id="form">
 				Başlık :<br/>
 				<input type="text" name="baslik"/><br/><br/>
+				<input type="hidden" id="<?php echo $id; ?>" class="gizli"/>
 				Yorumunuz : <br/>
 				<textarea name="yorum" id="yorum"></textarea>
 				<br/><br/>
@@ -26,9 +37,8 @@
 		</div>
 	</div>
 	<?php
-	$id = intval($_GET['id']);
 	if(isset($_POST["yorumyap"])){
-		if(empty($_POST["yorum"])){
+		if(empty($_POST["yorum"]) or $_POST["yorum"] == ""){
 			?>
 			<script type="text/javascript">
 				alert("Lütfen yorum alanını boş bırakmayınız !!");
@@ -50,10 +60,10 @@
 
 			$sorgu = "INSERT INTO yorumlar (yorum_ad , yorum_soyad , yorum_tarih , yorum , yorum_saat , yorum_kitapid , yorum_baslik , yorum_anonimlik) VALUES ('$ad' , '$soyad' , '$tarih' , '$yorum' , '$saat' , '$yorum_kitapid' , '$baslik' , '$anonimlik')";
 			$baglanti->query($sorgu);
-
 			?>
 			<script type="text/javascript">
 				alert("Yorumunuz Eklendi...");
+				yonlendir();
 			</script>
 			<?php
 		}

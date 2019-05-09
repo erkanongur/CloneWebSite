@@ -3,7 +3,7 @@
 	<title>Akademik, Kültür ve Eğitim Kitapları - Gazi Kitabevi</title>
 	<meta charset="utf-8"/>
 	<link type="text/css" rel="stylesheet" href="CSS/header.css"/>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="fontawesome/css/all.css">
 	<?php include 'baglanti.php';
 		session_start();
 	?> 
@@ -12,7 +12,10 @@
 
 <div class="header">
 <div class="hakkimizda">
-	<a href="hakkimizda.html">Hakkımızda</a>&nbsp&nbsp&nbsp&nbsp<a href="iletisim.html">İletişim</a>&nbsp&nbsp&nbsp&nbsp<a href="akademik.html">Akademik Teşvik Bilgilendirme</a>
+	<a href="hakkimizda.html">Hakkımızda</a>&nbsp&nbsp&nbsp&nbsp
+	<a href="iletisim.html">İletişim</a>&nbsp&nbsp&nbsp&nbsp
+	<a href="akademik.html">Akademik Teşvik Bilgilendirme</a>&nbsp&nbsp&nbsp&nbsp
+	<a href="anket.php">Anket</a>
 	<div class="giris">
 		<?php 
 			if(isset($_SESSION["login"]) != true){
@@ -24,6 +27,7 @@
 							$_SESSION["login"] = true;
 							$_SESSION["ad"] = $_COOKIE["kadi"];
 							$_SESSION["soyad"] = $_COOKIE["ksoyad"];
+							$_SESSION["kid"] = $_COOKIE["kid"];
 							$cookie_kontrol = true;
 							break;
 						}
@@ -75,6 +79,7 @@
 					$_SESSION["login"] = true;
 					$_SESSION["ad"] = $satir["uye_ad"];
 					$_SESSION["soyad"] = $satir["uye_soyad"];
+					$_SESSION["kid"] = $satir["uye_id"];
 
 					if(isset($_POST["giris_hatirla"])){
 						setcookie("kid", $satir["uye_id"], time()+60*60*24);
@@ -105,7 +110,10 @@
 </div>
 <div class="arama" background-image="images/arama.jpg">
 	<img src="images/logo.png" class="resim"/>
-	<input type="search" placeholder="    Yazar Adı, Kitap Adı Yada Stok Kodu İle Arama Yapabilirsiniz..."/ class="searchbar">
+	<form action="" method="POST">
+		<input type="text" placeholder="    Yazar Adı, Kitap Adı Yada Stok Kodu İle Arama Yapabilirsiniz..." class="searchbar" name="product"/>
+		<button type="submit" class="search_btn" name="search_buton" ><span id="search_buton">Ara</span></button>
+	</form>
 	<div class="kargo">
 		<i class="fas fa-truck"></i>
 		<a style="margin-right:10px" href="kargo.html">Kargo Sorgulama</a>
@@ -148,3 +156,19 @@
 </div>		
 </body>
 </html>
+<?php
+	if (isset($_POST["search_buton"])) {
+		$aranan = $_POST["product"];
+		echo '<input type="hidden" value="'.$aranan.'" id="unique"/>';
+		?>
+			<script type="text/javascript">
+				function ara(){
+					var eleman = document.getElementById('unique');
+					location.replace("index.php?sorgu=" + eleman.value);
+				}
+				ara();
+			</script>
+		<?php
+	}
+
+?>

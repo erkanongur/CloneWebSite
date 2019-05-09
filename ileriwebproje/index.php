@@ -17,7 +17,14 @@ include 'baglanti.php';
 <div class="main">
 	<div class="kitap_sutun">
 		<?php
+		$sorgu = "";
+		if(isset($_GET["sorgu"])){
+			$kitap_adi = $_GET["sorgu"];
+			$sorgu = "SELECT * FROM kitaplar WHERE kitapadi LIKE '%$kitap_adi%'";
+		}
+		else{
 			$sorgu = "SELECT * FROM kitaplar";
+		}
 			$sonuc=$baglanti->query($sorgu);
 			$kitap_adlari = array();
 			$kitap_fiyatlari = array();
@@ -51,6 +58,7 @@ include 'baglanti.php';
 			else{
 				echo "Kayıt yok!!";
 			}
+		
 		?>
 	</div>
 </div>

@@ -1,0 +1,32 @@
+.container{
+	width: 70%;
+	margin: auto;
+	background-color: white;
+}
+.anket_tablo{
+	width: 70%;
+	margin: auto;
+	background-color: white;
+	border: 1px solid gray;
+}
+.anket_tablo #baslik_satir{
+	text-align: center;
+	font-family: Impact;
+	color: black;
+	background-color: white;
+	line-height: 20px;
+}
+.anket_tablo #soru{
+	background-color: white;
+	text-align: center;
+	font-family: Impact;
+	line-height: 50px;
+}
+.anket_tablo #soru:hover {
+    background-color:#13326b;
+    color:#ffffff;
+    text-shadow: 1px 2px #000000;
+    box-shadow: 0px 0px 10px #ff0000;
+    -webkit-box-shadow: 0px 0px 10px #ff0000;
+    -moz-box-shadow: 0px 0px 10px #ff0000;
+}
